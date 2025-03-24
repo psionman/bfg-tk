@@ -10,6 +10,7 @@ from psiutils.utilities import window_resize
 
 from constants import APP_TITLE
 from config import read_config
+from data import DataStore
 import text
 
 from main_menu import MainMenu
