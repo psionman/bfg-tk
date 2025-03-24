@@ -23,6 +23,8 @@ class MainFrame():
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
         self.config = read_config()
+        self.data_store = DataStore()
+        self.data_store.read
 
         # tk variables
 
