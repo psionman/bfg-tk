@@ -7,6 +7,7 @@ from constants import CONFIG_PATH, USER_DATA_DIR
 DEFAULT_CONFIG = {
     'data_directory': USER_DATA_DIR,
     'remember_username': False,
+    'confirm_bids': False,
     'geometry': {
         'frm_main': '500x600',
         'frm_config': '700x300',

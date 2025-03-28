@@ -11,6 +11,7 @@ from psiutils.utilities import display_icon
 
 from constants import ICON_FILE
 from module_caller import ModuleCaller
+import styles
 
 from forms.frm_main import MainFrame
 
@@ -24,6 +25,7 @@ class Root():
         root.protocol("WM_DELETE_WINDOW", root.destroy)
 
         get_styles()
+        styles.load_styles()
 
         dlg = None
         if len(sys.argv) > 1:

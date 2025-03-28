@@ -3,6 +3,9 @@
 import tkinter as tk
 from tkinter import ttk
 from pathlib import Path
+from PIL import ImageTk, Image
+from io import BytesIO
+import base64
 
 from psiutils.constants import PAD, DIALOG_STATUS
 from psiutils.buttons import ButtonFrame, Button
@@ -15,6 +18,7 @@ import text
 
 from main_menu import MainMenu
 from forms.frm_login import LoginFrame
+from forms.frm_bidding_box import BiddingBoxFrame
 
 FRAME_TITLE = APP_TITLE
 
@@ -24,16 +28,19 @@ class MainFrame():
         self.root = root
         self.config = read_config()
         self.data_store = DataStore()
-        self.data_store.read
 
         # tk variables
 
         self.show()
 
-        dlg = LoginFrame(self)
+        # TODO edit LoginFrame to reactivate
+        # dlg = LoginFrame(self)
+        # self.root.wait_window(dlg.root)
+        # if dlg.status != DIALOG_STATUS['ok']:
+        #     self.dismiss()
+
+        dlg = BiddingBoxFrame(self)
         self.root.wait_window(dlg.root)
-        if dlg.status != DIALOG_STATUS['ok']:
-            self.dismiss()
 
     def show(self):
         root = self.root
@@ -65,6 +72,21 @@ class MainFrame():
         frame = ttk.Frame(master)
         # frame.rowconfigure(0, weight=1)
         # frame.columnconfigure(1, weight=1)
+        clubs = '\u2663'
+        hearts = '\u2665'
+        diams = '\u2666'
+        spades = '\u2660'
+
+        image_1 = self.data_store.call_image('3C', 2)
+        label = tk.Label(frame, image=image_1)
+        label.image = image_1  # Keep a reference - important!!!!
+        label.pack()
+
+        image_2 = self.data_store.static_data['call_images']['3C']
+        label = tk.Label(frame, text=f'1{spades}')
+        label.config(font=('TkDefaultFont', 44, 'bold'))
+        label.image = image_2  # Keep a reference
+        label.pack()
 
         return frame
 

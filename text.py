@@ -20,3 +20,8 @@ DELETE_THESE_ITEMS = 'Are you sure you want to delete these item(s)?'
 DELETE_ITEM = 'Are you sure you wish to delete this item?'
 
 BULLET = '\u2022'
+
+CLUBS = '\u2663'
+DIAMS = '\u2666'
+HEARTS = '\u2665'
+SPADES = '\u2660'
