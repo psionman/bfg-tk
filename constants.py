@@ -9,8 +9,6 @@ from psiutils.known_paths import resolve_path
 load_dotenv()
 TESTING = os.getenv("TESTING")
 
-
-
 # General
 AUTHOR = 'Jeff Watkins'
 APP_NAME = 'bfg'

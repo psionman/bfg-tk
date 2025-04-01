@@ -23,7 +23,7 @@ def load_styles() -> None:
         'black_clicked.TButton',
         foreground='white',
         background='black',
-        font=('Helvetica', 15, 'bold'),
+        ont=('Helvetica', 15, 'bold'),
         width=3.5,
         )
     style.map(
@@ -69,3 +69,8 @@ def load_styles() -> None:
         foreground=[('pressed', 'white'), ('active', 'green')],
         background=[('pressed',  'black'), ('active', 'white')]
         )
+
+    # style.configure('border.TFrame',
+    #                 border=1,
+    #                 borderthickness=1)
+    # print(style .layout('TButton'))

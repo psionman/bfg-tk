@@ -1,6 +1,4 @@
 """Main module for Bid for Game."""
-import sys
-
 from root import Root
 
 from psiutils.icecream_init import ic_init

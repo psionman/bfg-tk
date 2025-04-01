@@ -19,6 +19,8 @@ DELETE_RECORD = 'Are you sure you wish to delete this record?'
 DELETE_THESE_ITEMS = 'Are you sure you want to delete these item(s)?'
 DELETE_ITEM = 'Are you sure you wish to delete this item?'
 
+NEW_BOARD = 'New board'
+
 BULLET = '\u2022'
 
 CLUBS = '\u2663'
