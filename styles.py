@@ -3,8 +3,20 @@ from tkinter import ttk
 
 
 def load_styles() -> None:
-    # BiddingBox
     style = ttk.Style()
+
+    # Name labels
+    style.configure(
+        'name.TLabel',
+        font=('Helvetica', 15, 'bold'),
+        )
+
+    style.configure(
+        'seat.TLabel',
+        font=('Helvetica', 12, 'bold'),
+        )
+
+    # BiddingBox
     style.configure(
         'black.TButton',
         foreground='black',
@@ -23,7 +35,7 @@ def load_styles() -> None:
         'black_clicked.TButton',
         foreground='white',
         background='black',
-        ont=('Helvetica', 15, 'bold'),
+        font=('Helvetica', 15, 'bold'),
         width=3.5,
         )
     style.map(
